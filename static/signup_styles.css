@@ -1,7 +1,7 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: url("../static/background1.jpg");
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +11,7 @@ body {
 }
 
 .signup-container {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,3 +89,4 @@ p a {
 p a:hover {
     text-decoration: underline;
 }
+
