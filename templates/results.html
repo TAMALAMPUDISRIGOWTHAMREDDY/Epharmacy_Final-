@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ePharma - Medication Result</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/Faviicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/Faviicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/Faviicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../static/Faviicon/favicon_io/site.webmanifest">
+    <style>
+        .pharmacy-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pharmacy-item {
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .pharmacy-link {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .pharmacy-link img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+
+        .pharmacy-link figcaption {
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medication Recommendation</h1>
+    
+    <p><strong>Gender:</strong> {{ gender }}</p>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Symptoms:</strong> {{ symptoms }}</p>
+    
+    <h2>Recommended Medicine:</h2>
+    <p>{{ medicine }}</p>
+    
+    <div class="emergency" id="Guide">
+        <h1 class="now">Buy Medicines Online</h1>
+        <p class="now">Purchase medicines from these trusted online pharmacies:</p>
+        <ul class="pharmacy-list">
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://www.apollopharmacy.in" target="_blank">
+                    <img src="../static/images/apollo-pharmacy-logo.png" alt="Apollo Pharmacy">
+                    <figcaption>Apollo Pharmacy</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://www.netmeds.com" target="_blank">
+                    <img src="../static/images/netmeds-logo.png" alt="Netmeds">
+                    <figcaption>Netmeds</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://pharmeasy.in" target="_blank">
+                    <img src="../static/images/pharmeasy-logo.png" alt="PharmEasy">
+                    <figcaption>PharmEasy</figcaption>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <article>
+        <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
+    </article>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home<i class="fa fa-home"></i></a>
+</body>
+</html>
